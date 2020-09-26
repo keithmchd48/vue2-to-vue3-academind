@@ -1,4 +1,6 @@
+// use "createApp"
 const app = Vue.createApp({
+  // data must be a function
   data() {
     return {
       message: 'This works in Vue 2!',
@@ -10,6 +12,7 @@ const app = Vue.createApp({
     },
   },
 })
+// register using app.component instead of Vue.component
 app.component('the-button', {
   emits: ['update'], // not required, but makes components more understandable
   template: '<button @click="updateMessage">Click me</button>',
